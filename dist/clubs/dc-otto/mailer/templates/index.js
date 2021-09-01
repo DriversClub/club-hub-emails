@@ -168,22 +168,22 @@ const membershipInquiryTemplate = (memberInfo, club) => {
 exports.MembershipInquiryTemplate = membershipInquiryTemplate;
 const membershipInquiryResponseTemplate = (memberFormInfo, club, url) => {
     const applicationURL = `${club.baseURL}/forms/application`;
-    const final = (club.name === core.Constants.Clubs.DRIVERS_CLUB) ? '' : `
-	<p>Sincerely,</p>
-
-	<p>Eli Kogan</p>
-	<p>General Manager</p>
-	`;
     const message = `
 		<p>Dear ${memberFormInfo.firstName},</p>
 
-		<p>Thank you for contacting ${club.name} regarding ${memberFormInfo.membership.label} membership!</p>
+		<p>Thank you for contacting WAREHOUSE about a club membership! </p>
 
-		<p>We would like to learn more about your automotive passions.</p>
+		<p>We would like to learn more about your passion for cars and get to know you through our application process.</p>
 
-		<p>Please click <a href="${applicationURL}">this link</a> to begin the formal application process.</p>
+		<p>Please follow <a href="${applicationURL}">this link</a> to our application questionnaire and fill it out with as much detail as possible. </p>
 
-		${final}
+		<p>Thank you for your interest in WAREHOUSE, we will reach out to you shortly to discuss more details.</p>
+
+		<p>Sincerely,</p>
+
+		<p>Nate Hedrick</p>
+
+		<p>Director of Membership Experience </p>
 	`;
     return message;
 };
